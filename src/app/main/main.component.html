@@ -1,1 +1,22 @@
-<button (click)="mainButton()">Listado</button>
+<mat-toolbar color="primary">
+  <span>My Application</span>
+</mat-toolbar>
+
+<br>
+
+
+<div class="contenedor">
+  <form name="form1" class="example-form">
+    <mat-form-field  > 
+      <mat-label>Nombre</mat-label>
+      <input [(ngModel)]="inputNombre" name="nombre" autocomplete="off" matInput placeholder="Ex. Pepe" >
+    </mat-form-field>
+  
+    <mat-form-field >
+      <mat-label>Apellidos</mat-label>
+      <input [(ngModel)]="inputApellidos" name="apellido" autocomplete="off" matInput placeholder="Ex. Jarrones" >
+    </mat-form-field>
+  
+    <button mat-raised-button	color="primary" (click)="mainButton()">Añadir a Listado</button>
+  </form>
+</div>
