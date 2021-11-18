@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { ListaService } from './lista.service';
 
 export interface PeriodicElement {
@@ -6,6 +7,7 @@ export interface PeriodicElement {
   apellidos: string;
 
 }
+
 
 @Component({
   selector: 'app-lista',
@@ -21,8 +23,7 @@ export class ListaComponent implements OnInit {
   ];
 
 
-
-  constructor(private lista: ListaService) {}
+  constructor(private lista: ListaService, private activatedRoute: ActivatedRoute) {}
   
   ngOnInit(): void {
 
